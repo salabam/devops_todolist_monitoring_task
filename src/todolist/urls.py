@@ -1,6 +1,6 @@
-from monitoring.views import metrics_view
 from django.contrib import admin
 from django.urls import include, path
+from todolist.views import metrics_view
 
 urlpatterns = [
     path("", include("lists.urls")),

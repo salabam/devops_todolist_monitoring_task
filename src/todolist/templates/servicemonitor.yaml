@@ -6,7 +6,7 @@ metadata:
     release: kube-prometheus-stack
   selector:
     matchLabels:
-      app: {{ .Chart.Name }}
+      app: todoapp
   endpoints:
     - port: http
       path: /metrics
