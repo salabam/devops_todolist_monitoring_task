@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: {{ .Release.Name }}
   labels:
-    app: {{ todoapp }}
+    app: todoapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ todoapp }}
+      app: todoapp
   template:
     metadata:
       labels:
-        app: {{ todoapp }}
+        app: todoapp
     spec:
       containers:
-        - name: {{ todoapp }}
+        - name: todoapp
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: IfNotPresent
           ports:
